@@ -1,0 +1,23 @@
+/*-- scss:defaults --*/
+$body-bg: #ffffff;
+$body-color: #1a1a2e;
+$font-family-sans-serif: "Arial", sans-serif;
+$font-size-root: 32px;
+$link-color: #0066cc;
+
+/*-- scss:rules --*/
+
+/* ... your existing logo rules ... */
+
+/* Push slide content away from logo corners */
+.reveal .slides section {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+  padding-left: 80px !important;
+  padding-right: 80px !important;
+  box-sizing: border-box;
+}
+
+.reveal .slides section h2 {
+  margin-top: 10px;
+}
