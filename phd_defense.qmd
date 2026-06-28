@@ -1,0 +1,59 @@
+---
+format: 
+  revealjs:
+    theme: custom.scss
+    slide-number: true
+    title-slide: false
+    width: 1280
+    height: 720
+---
+
+```{=html}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Logos
+  const container = document.createElement('div');
+  container.style.cssText = 'position:fixed; top:0; left:0; width:100vw; height:100vh; pointer-events:none; z-index:9999;';
+  const logos = [
+    { src: 'IMDEA_transparent.png',   pos: 'top:10px; left:10px;',     size: 'height:60px; width:auto;' },
+    { src: 'uc3m_logo.png',           pos: 'top:10px; right:10px;',    size: 'height:55px; width:auto;' },
+    { src: 'CAM_transparent.png',     pos: 'bottom:10px; left:10px;',  size: 'height:60px; width:auto;' },
+    { src: 'secret_transparent2.png', pos: 'bottom:10px; right:10px;', size: 'width:220px; height:auto;' },
+  ];
+  logos.forEach(function(logo) {
+    const img = document.createElement('img');
+    img.src = logo.src;
+    img.style.cssText = 'position:absolute; ' + logo.pos + ' ' + logo.size;
+    container.appendChild(img);
+  });
+  document.body.appendChild(container);
+
+  // Title slide content
+  const titleSlide = document.querySelector('.reveal .slides section:first-child');
+  if (titleSlide) {
+    titleSlide.innerHTML = `
+      <div style="text-align:center; margin-top:10px;">
+        <h1 style="font-size:1.8em; color:#1a1a2e; font-weight:bold; line-height:1.3;">
+          Thermoplastic Materials for<br>Thermoformable Clear Aligners
+        </h1>
+        <hr style="border:2px solid #0066cc; width:60%; margin:20px auto;">
+        <p style="font-size:1em;"><strong>PhD Candidate:</strong> José Ignacio Delgado Castaño</p>
+        <p style="font-size:0.85em; color:#555;"><strong>Thesis Director:</strong> Dr. Juan Pedro Fernández Blázquez</p>
+        <p style="font-size:0.85em; color:#555;"><strong>PhD Program:</strong> Materials Science and engineering</p>
+        <p style="font-size:0.8em; color:#555"><strong>University:</strong> Universidad Carlos III de Madrid</p>
+         <p style="font-size:0.75em; color:#888; margin-top:20px;">July 2026</p>
+      </div>
+    `;
+  }
+});
+</script>
+```
+
+## Index
+
+Hello world
+
+## State of the art
+
+Second slide
